@@ -11,6 +11,7 @@ public class HelloController {
 
     @GetMapping("/{name}")
     public String helloUser(@PathVariable("name") String name) {
+        System.out.println("teste");
         return "Seja bem-vindo(a) " + name;
     }
 }
