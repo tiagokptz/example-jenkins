@@ -13,7 +13,7 @@ pipeline{
         }
         stage('Deploy'){
             steps{
-                deploy adapters: [tomcat9(credentialsId: 'TomcatExternal', path: '', url: 'http://172.16.31.7:9000')], contextPath: 'te', war: 'ExampleJenkins.war'
+                deploy adapters: [tomcat9(credentialsId: 'TomcatExternal', path: '', url: 'http://172.16.31.7:9000')], contextPath: 'te', war: 'target/ExampleJenkins.war'
             }
         }
     }
